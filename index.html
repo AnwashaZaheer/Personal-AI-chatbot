@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anwshah Zaheer | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(-45deg,#0f172a,#1e293b,#0f172a,#111827);
+background-size:400% 400%;
+animation:gradientBG 15s ease infinite;
+color:white;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+width:100%;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+backdrop-filter:blur(15px);
+background:rgba(255,255,255,0.05);
+border-bottom:1px solid rgba(255,255,255,0.1);
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#38bdf8;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+}
+
+.nav-links li{
+margin-left:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+position:relative;
+}
+
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:#38bdf8;
+transition:0.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 10%;
+}
+
+.hero h1{
+font-size:55px;
+font-weight:800;
+}
+
+.highlight{
+color:#38bdf8;
+}
+
+.typing{
+margin-top:15px;
+font-size:20px;
+color:#94a3b8;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:12px 30px;
+border-radius:30px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+transition:0.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px #38bdf8;
+}
+
+/* SECTIONS */
+section{
+padding:120px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:60px;
+font-size:32px;
+color:#38bdf8;
+}
+
+/* CARDS */
+.card-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+transition:0.4s;
+transform:translateY(40px);
+opacity:0;
+}
+
+.card.show{
+transform:translateY(0);
+opacity:1;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* CONTACT */
+.contact-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.contact-card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:15px;
+backdrop-filter:blur(15px);
+transition:0.4s;
+transform:translateY(40px);
+opacity:0;
+}
+
+.contact-card.show{
+transform:translateY(0);
+opacity:1;
+}
+
+.contact-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+.social-links{
+margin-top:15px;
+}
+
+.social-links a{
+display:inline-block;
+margin-right:15px;
+padding:8px 18px;
+border-radius:25px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+transition:0.3s;
+}
+
+.social-links a:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px #38bdf8;
+}
+
+/* CHATBOT */
+.chat-icon{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#38bdf8;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+z-index:2000;
+transition:0.3s;
+}
+
+.chat-icon:hover{
+transform:scale(1.1);
+}
+
+.chat-box{
+position:fixed;
+bottom:100px;
+right:25px;
+width:320px;
+height:420px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border-radius:15px;
+display:none;
+flex-direction:column;
+overflow:hidden;
+z-index:2000;
+}
+
+.chat-header{
+padding:15px;
+background:#38bdf8;
+color:black;
+font-weight:600;
+}
+
+.chat-messages{
+flex:1;
+padding:15px;
+overflow-y:auto;
+font-size:14px;
+}
+
+.message{
+margin-bottom:10px;
+}
+
+.user{
+text-align:right;
+color:#38bdf8;
+}
+
+.bot{
+text-align:left;
+color:#ccc;
+}
+
+.chat-input{
+display:flex;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.chat-input input{
+flex:1;
+padding:10px;
+border:none;
+outline:none;
+background:transparent;
+color:white;
+}
+
+.chat-input button{
+padding:10px 15px;
+background:#38bdf8;
+border:none;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:rgba(255,255,255,0.05);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{font-size:35px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Anwshah.</div>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section id="home" class="hero">
+<div>
+<h1>Hi, I'm <span class="highlight">Anwshah Zaheer</span></h1>
+<div class="typing" id="typing"></div>
+<a href="#" class="btn">Download CV</a>
+</div>
+</section>
+
+<section id="skills">
+<h2>Technical Skills</h2>
+<div class="card-container">
+<div class="card">HTML / CSS</div>
+<div class="card">JavaScript</div>
+<div class="card">Tailwind CSS</div>
+<div class="card">ReactJS</div>
+<div class="card">REST APIs</div>
+<div class="card">Git & GitHub</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="card-container">
+<div class="card">
+<h3>Portfolio Websites</h3>
+<p>Responsive modern portfolios using Flexbox & Grid.</p>
+</div>
+<div class="card">
+<h3>E-Medical Application</h3>
+<p>Built login & appointment UI using React components.</p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<div class="contact-container">
+<div class="contact-card">
+<h3>Get In Touch</h3>
+<p><strong>Email:</strong> anwashayzaheer@gmail.com</p>
+<p><strong>Phone:</strong> 03204615610</p>
+<p><strong>Location:</strong> Lahore, Pakistan</p>
+</div>
+
+<div class="contact-card">
+<h3>Connect With Me</h3>
+<div class="social-links">
+<a href="https://www.linkedin.com/in/anwasha-khan-31597127a/" target="_blank">LinkedIn</a>
+<a href="https://github.com/AnwashaZaheer" target="_blank">GitHub</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>© 2026 Anwshah Zaheer</footer>
+
+<div class="chat-icon" onclick="toggleChat()">💬</div>
+
+<div class="chat-box" id="chatBox">
+<div class="chat-header">Ask Me About Anwshah</div>
+<div class="chat-messages" id="chatMessages"></div>
+<div class="chat-input">
+<input type="text" id="userInput" placeholder="Type a message...">
+<button onclick="sendMessage()">Send</button>
+</div>
+</div>
+
+<script>
+// Typing
+const text=["Front-End Developer","Computer Science Student","React Learner"];
+let count=0,index=0,currentText="",letter="";
+(function type(){
+if(count===text.length){count=0;}
+currentText=text[count];
+letter=currentText.slice(0,++index);
+document.getElementById("typing").textContent=letter;
+if(letter.length===currentText.length){
+setTimeout(()=>{index=0;count++;},1500);
+}
+setTimeout(type,100);
+})();
+
+// Scroll Reveal
+const elements=document.querySelectorAll('.card,.contact-card');
+window.addEventListener('scroll',()=>{
+elements.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('show');
+}
+});
+});
+
+// Chat Toggle
+function toggleChat(){
+const box=document.getElementById("chatBox");
+box.style.display=box.style.display==="flex"?"none":"flex";
+}
+
+// ====== YOUR PERSONAL KNOWLEDGE BASE ======
+const portfolioContext = `
+Name: Anwshah Zaheer
+Family: Two brothers, no sisters. Father is a government officer. Mother is a housewife. Her brothers are very supportive and loving. She feels blessed.
+Education: Matric A Grade, Intermediate B Grade, Currently 6th semester Computer Science at NCBA&E. Last semester GPA 3.78.
+Professional Development: Joined NAVTTC AI course. Learning Python, AI, ML, Deep Learning.
+Career Goal: Become an AI Engineer.
+Internship: Completed Web Development internship at Codeiez.
+Skills: Python, AI fundamentals, ML basics, Deep Learning basics, Web Development, Figma.
+Achievements: Athlete. Secured 1st position in athletics at GCU in 2024.
+Hobbies: Reading books, running, cooking, exploring restaurants.
+Future Dreams: Go to Canada independently and build a successful future. Buy Fortuner or BMW. Open the best coffee restaurant.
+`;
+
+// ====== ADD YOUR OPENAI API KEY HERE ======
+const API_KEY = "API_key value";
+
+// ====== CHAT TOGGLE ======
+function toggleChat(){
+const box=document.getElementById("chatBox");
+box.style.display=box.style.display==="flex"?"none":"flex";
+}
+
+// ====== SEND MESSAGE ======
+function sendMessage(){
+const input=document.getElementById("userInput");
+const messages=document.getElementById("chatMessages");
+let userText=input.value.trim();
+
+if(userText==="") return;
+
+messages.innerHTML+=`<div class="message user">${userText}</div>`;
+input.value="";
+
+const text=userText.toLowerCase();
+
+let reply="I'm Anwshah's assistant 😊 Ask me about her education, family, achievements, goals, internship, hobbies or dreams!";
+
+// FAMILY
+if(text.includes("family") || text.includes("brother") || text.includes("parent")){
+reply="Anwshah has two brothers and no sisters. Her father is a government officer and her mother is a housewife. Her brothers are very supportive and loving, and she feels truly blessed.";
+}
+
+// EDUCATION
+else if(text.includes("education") || text.includes("gpa") || text.includes("semester") || text.includes("study")){
+reply="She is currently in 6th semester of Computer Science at NCBA&E. Her last semester GPA was 3.78. She got A grade in Matric and B grade in Intermediate.";
+}
+
+// AI / CAREER
+else if(text.includes("ai") || text.includes("machine") || text.includes("deep") || text.includes("python") || text.includes("navttc")){
+reply="She recently joined NAVTTC AI course and is learning Python, AI, Machine Learning and Deep Learning. Her goal is to become an AI Engineer.";
+}
+
+// INTERNSHIP
+else if(text.includes("internship") || text.includes("codeiez")){
+reply="She completed her Web Development internship at Codeiez last year.";
+}
+
+// SKILLS
+else if(text.includes("skill")){
+reply="Her skills include Python, AI fundamentals, ML basics, Deep Learning basics, Web Development and Figma.";
+}
+
+// ACHIEVEMENT
+else if(text.includes("achievement") || text.includes("athlete") || text.includes("gcu")){
+reply="She is an athlete and secured 1st position in athletics at GCU in 2024 🏆.";
+}
+
+// HOBBY
+else if(text.includes("hobby") || text.includes("hobbies") || text.includes("reading") || text.includes("running") || text.includes("cooking")){
+reply="She enjoys reading books, running, cooking and exploring different restaurants.";
+}
+
+// DREAM
+else if(text.includes("dream") || text.includes("future") || text.includes("canada") || text.includes("bmw") || text.includes("fortuner") || text.includes("coffee")){
+reply="Her biggest dream is to go to Canada independently and build a successful future. She wants to buy a Fortuner or BMW and open the best coffee restaurant.";
+}
+
+// CONTACT
+else if(text.includes("contact") || text.includes("email") || text.includes("phone")){
+reply="You can contact her at anwashayzaheer@gmail.com or call 03204615610.";
+}
+
+// Show reply with slight delay
+setTimeout(()=>{
+messages.innerHTML+=`<div class="message bot">${reply}</div>`;
+messages.scrollTop=messages.scrollHeight;
+},500);
+}
+
+// Chat Logic
+
+</script>
+
+</body>
+</html>
