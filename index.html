@@ -1,30 +1,31 @@
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anwshah Khan | Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anwshah Khan | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<style>
-    * {
+    <style>
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         scroll-behavior: smooth;
-    }
+      }
 
-    body {
+      body {
         background: #fdf6ec;
         color: #3e3e3e;
-    }
+      }
 
-    /* NAV */
-    nav {
+      /* NAV */
+      nav {
         position: fixed;
         width: 100%;
         top: 0;
@@ -35,30 +36,30 @@
         background: #fff7ed;
         border-bottom: 1px solid #fcd9bd;
         z-index: 1000;
-    }
+      }
 
-    .logo {
+      .logo {
         font-size: 24px;
         font-weight: 700;
         color: #d97706;
-    }
+      }
 
-    .nav-links {
+      .nav-links {
         display: flex;
         list-style: none;
-    }
+      }
 
-    .nav-links li {
+      .nav-links li {
         margin-left: 30px;
-    }
+      }
 
-    .nav-links a {
+      .nav-links a {
         text-decoration: none;
         color: #3e3e3e;
         position: relative;
-    }
+      }
 
-    .nav-links a::after {
+      .nav-links a::after {
         content: "";
         position: absolute;
         left: 0;
@@ -67,35 +68,35 @@
         height: 2px;
         background: #f59e0b;
         transition: 0.3s;
-    }
+      }
 
-    .nav-links a:hover::after {
+      .nav-links a:hover::after {
         width: 100%;
-    }
+      }
 
-    /* HERO */
-    .hero {
+      /* HERO */
+      .hero {
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-    }
+      }
 
-    .hero h1 {
+      .hero h1 {
         font-size: 55px;
-    }
+      }
 
-    .highlight {
+      .highlight {
         color: #d97706;
-    }
+      }
 
-    .typing {
+      .typing {
         margin-top: 15px;
         color: #7c6f64;
-    }
+      }
 
-    .btn {
+      .btn {
         margin-top: 20px;
         display: inline-block;
         padding: 12px 30px;
@@ -104,96 +105,96 @@
         border-radius: 30px;
         text-decoration: none;
         transition: 0.3s;
-    }
+        margin-right: 10px;
+      }
 
-    .btn:hover {
+      .btn:hover {
         transform: scale(1.1);
         box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
-    }
+      }
 
-    /* SECTIONS */
-    section {
+      /* SECTIONS */
+      section {
         padding: 120px 10%;
-    }
+      }
 
-    h2 {
+      h2 {
         text-align: center;
         margin-bottom: 50px;
         color: #d97706;
-    }
+      }
 
-    /* CARDS */
-    .card-container {
+      /* CARDS */
+      .card-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
-    }
+      }
 
-    .card {
+      .card {
         background: #fffaf3;
         padding: 20px;
         border-radius: 12px;
         border: 1px solid #fcd9bd;
         transition: all 0.3s ease;
-    }
+      }
 
-    .card:hover {
+      .card:hover {
         transform: translateY(-10px) scale(1.03);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
+      }
 
-    .card strong {
+      .card strong {
         color: #d97706;
         font-weight: 700;
-    }
+      }
 
-    .card h3 {
+      .card h3 {
         font-weight: 700;
         color: #d97706;
         margin-bottom: 8px;
-    }
+      }
 
-    .card p {
+      .card p {
         color: #6b7280;
         font-size: 14px;
-    }
+      }
 
-    /* CONTACT */
-    .contact-container {
+      /* CONTACT */
+      .contact-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
-    }
+      }
 
-    .contact-card {
+      .contact-card {
         background: #fffaf3;
         padding: 20px;
         border-radius: 12px;
         border: 1px solid #fcd9bd;
         transition: all 0.3s ease;
-    }
+      }
 
-    .contact-card:hover {
+      .contact-card:hover {
         transform: translateY(-8px);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
+      }
 
-    /* ✅ ONLY LABELS STYLE */
-    .contact-card p {
+      .contact-card p {
         color: #7a6250;
-    }
+      }
 
-    .contact-card strong {
+      .contact-card strong {
         color: #d97706;
         font-weight: 700;
-    }
+      }
 
-    /* SOCIAL */
-    .social-links {
+      /* SOCIAL */
+      .social-links {
         margin-top: 10px;
-    }
+      }
 
-    .social-links a {
+      .social-links a {
         margin-right: 10px;
         background: #f59e0b;
         color: white;
@@ -201,15 +202,15 @@
         border-radius: 20px;
         text-decoration: none;
         transition: 0.3s;
-    }
+      }
 
-    .social-links a:hover {
+      .social-links a:hover {
         transform: scale(1.1);
         box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
-    }
+      }
 
-    /* CHAT */
-    .chat-icon {
+      /* CHAT */
+      .chat-icon {
         position: fixed;
         bottom: 20px;
         right: 20px;
@@ -222,14 +223,14 @@
         align-items: center;
         cursor: pointer;
         transition: 0.3s;
-    }
+      }
 
-    .chat-icon:hover {
+      .chat-icon:hover {
         transform: scale(1.1);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+      }
 
-    .chat-box {
+      .chat-box {
         position: fixed;
         bottom: 90px;
         right: 20px;
@@ -241,17 +242,17 @@
         display: none;
         flex-direction: column;
         overflow: hidden;
-    }
+      }
 
-    .chat-header {
+      .chat-header {
         background: #f59e0b;
         padding: 12px;
         color: white;
         font-weight: 600;
         position: relative;
-    }
+      }
 
-    .close-btn {
+      .close-btn {
         position: absolute;
         right: 15px;
         top: 10px;
@@ -259,176 +260,212 @@
         cursor: pointer;
         color: white;
         transition: 0.3s;
-    }
+      }
 
-    .close-btn:hover {
+      .close-btn:hover {
         transform: scale(1.2);
-    }
+      }
 
-    .chat-messages {
+      .chat-messages {
         flex: 1;
         padding: 10px;
         overflow-y: auto;
-    }
+      }
 
-    .chat-input {
+      .chat-input {
         display: flex;
         border-top: 1px solid #fcd9bd;
-    }
+      }
 
-    .chat-input input {
+      .chat-input input {
         flex: 1;
         padding: 10px;
         border: none;
         outline: none;
         background: transparent;
-    }
+      }
 
-    .chat-input button {
+      .chat-input button {
         background: #f59e0b;
         border: none;
         color: white;
         padding: 10px 15px;
         cursor: pointer;
-    }
+      }
 
-    .user {
+      .user {
         text-align: right;
         color: #d97706;
         margin: 5px 0;
-    }
+      }
 
-    .bot {
+      .bot {
         color: #555;
         margin: 5px 0;
-    }
+      }
 
-    /* FOOTER */
-    footer {
+      /* FOOTER */
+      footer {
         text-align: center;
         padding: 20px;
         background: #fff7ed;
         color: #d97706;
         font-weight: 700;
-    }
+      }
 
-    @media (max-width: 768px) {
+      @media (max-width: 768px) {
         .hero h1 {
-            font-size: 35px;
+          font-size: 35px;
         }
-    }
-</style>
-</head>
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
+    <nav>
+      <div class="logo">Anwshah</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#cv">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-<nav>
-<div class="logo">Anwshah</div>
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+    <section id="home" class="hero">
+      <div>
+        <h1>Hi, I'm <span class="highlight">Anwshah Khan</span></h1>
+        <div class="typing" id="typing"></div>
+        <a href="assets/Anwshah zaheer Cv.pdf" target="_blank" class="btn">
+          📄 View CV
+        </a>
 
-<section id="home" class="hero">
-<div>
-<h1>Hi, I'm <span class="highlight">Anwshah Khan</span></h1>
-<div class="typing" id="typing"></div>
-<a href="#" class="btn">Download CV</a>
-</div>
-</section>
+        <a href="assets/Anwshah zaheer Cv.pdf" download class="btn">
+          ⬇ Download CV
+        </a>
+      </div>
+    </section>
 
-<section id="skills">
-<h2>Skills</h2>
-<div class="card-container">
-<div class="card"><strong>Frontend:</strong> HTML, CSS, JavaScript</div>
-<div class="card"><strong>Framework:</strong> React</div>
-<div class="card"><strong>Backend:</strong> Python</div>
-<div class="card"><strong>Tools:</strong> Git, GitHub</div>
-<div class="card"><strong>APIs:</strong> REST APIs</div>
-</div>
-</section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card-container">
+        <div class="card"><strong>Frontend:</strong> HTML, CSS, JavaScript</div>
+        <div class="card"><strong>Framework:</strong> React</div>
+        <div class="card"><strong>Backend:</strong> Python</div>
+        <div class="card"><strong>Tools:</strong> Git, GitHub</div>
+        <div class="card"><strong>APIs:</strong> REST APIs</div>
+      </div>
+    </section>
 
-<section id="projects">
-<h2>Projects</h2>
+    <section id="projects">
+      <h2>Projects</h2>
 
-<div class="card-container">
+      <div class="card-container">
+        <div class="card">
+          <h3>E-Medical</h3>
+          <p>React UI project</p>
+          <p>
+            Contributed to a healthcare web application by building reusable
+            components, maintaining UI consistency, and improving user flows.
+          </p>
+        </div>
 
-<div class="card">
-<h3>E-Medical</h3>
-<p>React UI project</p>
-<p>Contributed to a healthcare web application by building reusable components, maintaining UI consistency, and improving user flows.</p>
-</div>
+        <div class="card">
+          <h3>Clinic Plus — Healthcare App</h3>
+          <p>
+            Designed a healthcare app with appointment booking, video
+            consultations, lab tests, and medicine ordering. Created UI/UX in
+            Figma.
+          </p>
+        </div>
 
-<div class="card">
-<h3>Clinic Plus — Healthcare App</h3>
-<p>Designed a healthcare app with appointment booking, video consultations, lab tests, and medicine ordering. Created UI/UX in Figma.</p>
-</div>
+        <div class="card">
+          <h3>Reszo Restaurant App — React.js</h3>
+          <p>
+            Developed a responsive restaurant web app with dynamic menu, smooth
+            navigation, and mobile-friendly UI.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Reszo Restaurant App — React.js</h3>
-<p>Developed a responsive restaurant web app with dynamic menu, smooth navigation, and mobile-friendly UI.</p>
-</div>
+    <!-- ✅ CV SECTION -->
+    <section id="cv">
+      <h2>Resume</h2>
+      <div class="card-container">
+        <div class="card">
+          <p>You can view or download my professional CV below:</p>
+          <br />
+          <a href="assets/cv/Anwshah_Khan_CV.pdf" target="_blank" class="btn"
+            >📄 View CV</a
+          >
+          <a href="assets/cv/Anwshah_Khan_CV.pdf" download class="btn"
+            >⬇ Download CV</a
+          >
+        </div>
+      </div>
+    </section>
 
-</div>
-</section>
-<section id="contact">
-<h2>Contact</h2>
-<div class="contact-container">
-<div class="contact-card">
-<p><strong>Email:</strong> anwashayzaheer@gmail.com</p>
-<p><strong>Phone:</strong> 030000000</p>
-</div>
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-container">
+        <div class="contact-card">
+          <p><strong>Email:</strong> anwashayzaheer@gmail.com</p>
+          <p><strong>Phone:</strong> 030000000</p>
+        </div>
 
-<div class="contact-card">
-<div class="social-links">
-<a href="https://linkedin.com" target="_blank">LinkedIn</a>
-<a href="https://github.com" target="_blank">GitHub</a>
-</div>
-</div>
-</div>
-</section>
+        <div class="contact-card">
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer>© 2026 Anwshah</footer>
+    <footer>© 2026 Anwshah</footer>
 
-<div class="chat-icon" onclick="toggleChat()">💬</div>
+    <div class="chat-icon" onclick="toggleChat()">💬</div>
 
-<div class="chat-box" id="chatBox">
-<div class="chat-header">
-  Ask Me
-  <span class="close-btn" onclick="toggleChat()">✖</span>
-</div>
-<div class="chat-messages" id="chatMessages"></div>
-<div class="chat-input">
-<input id="userInput" placeholder="Type your question...">
-<button onclick="sendMessage()">Send</button>
-</div>
-</div>
+    <div class="chat-box" id="chatBox">
+      <div class="chat-header">
+        Ask Me
+        <span class="close-btn" onclick="toggleChat()">✖</span>
+      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-input">
+        <input id="userInput" placeholder="Type your question..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
 
-<script>
-const arr=["AI Engineer","Web Developer","Python Learner"];
-let a=0,b=0;
-(function typing(){
-if(a===arr.length)a=0;
-let txt=arr[a];
-document.getElementById("typing").innerText=txt.slice(0,b++);
-if(b>txt.length){b=0;a++;}
-setTimeout(typing,120);
-})();
+    <script>
+      const arr = ["AI Engineer", "Web Developer", "Python Learner"];
+      let a = 0,
+        b = 0;
+      (function typing() {
+        if (a === arr.length) a = 0;
+        let txt = arr[a];
+        document.getElementById("typing").innerText = txt.slice(0, b++);
+        if (b > txt.length) {
+          b = 0;
+          a++;
+        }
+        setTimeout(typing, 120);
+      })();
 
-function toggleChat(){
-let box=document.getElementById("chatBox");
-box.style.display=box.style.display==="flex"?"none":"flex";
-document.getElementById("userInput").focus();
-}
+      function toggleChat() {
+        let box = document.getElementById("chatBox");
+        box.style.display = box.style.display === "flex" ? "none" : "flex";
+        document.getElementById("userInput").focus();
+      }
 
-document.getElementById("userInput").addEventListener("keydown",e=>{
-if(e.key==="Enter") sendMessage();
-});
+      document.getElementById("userInput").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") sendMessage();
+      });
 
-const portfolioContext = `
+      const portfolioContext = `
 Education: Currently 6th semester Computer Science. GPA 3.78.
 Career Goal: Become an AI Engineer.
 Internship: Completed Web Development internship.
@@ -438,41 +475,43 @@ Hobbies: Coding, Reading, Running.
 Future Dreams: Open a coffee restaurant.
 `;
 
-function findAnswer(keyword){
-let lines=portfolioContext.split("\n");
-for(let line of lines){
-if(line.toLowerCase().includes(keyword.toLowerCase())){
-return line.split(":")[1];
-}
-}
-}
+      function findAnswer(keyword) {
+        let lines = portfolioContext.split("\n");
+        for (let line of lines) {
+          if (line.toLowerCase().includes(keyword.toLowerCase())) {
+            return line.split(":")[1];
+          }
+        }
+      }
 
-function sendMessage(){
-let input=document.getElementById("userInput");
-let msg=input.value.trim();
-if(!msg) return;
+      function sendMessage() {
+        let input = document.getElementById("userInput");
+        let msg = input.value.trim();
+        if (!msg) return;
 
-let chat=document.getElementById("chatMessages");
-chat.innerHTML+=`<div class="user">${msg}</div>`;
-input.value="";
+        let chat = document.getElementById("chatMessages");
+        chat.innerHTML += `<div class="user">${msg}</div>`;
+        input.value = "";
 
-let lowerMsg=msg.toLowerCase();
-let reply="Ask me about skills, education, goals or hobbies 😊";
+        let lowerMsg = msg.toLowerCase();
+        let reply = "Ask me about skills, education, goals or hobbies 😊";
 
-if(lowerMsg.includes("education")) reply=findAnswer("Education");
-else if(lowerMsg.includes("skill")) reply=findAnswer("Skills");
-else if(lowerMsg.includes("goal")) reply=findAnswer("Career Goal");
-else if(lowerMsg.includes("internship")) reply=findAnswer("Internship");
-else if(lowerMsg.includes("achievement")) reply=findAnswer("Achievements");
-else if(lowerMsg.includes("hobby")) reply=findAnswer("Hobbies");
-else if(lowerMsg.includes("dream")) reply=findAnswer("Future Dreams");
+        if (lowerMsg.includes("education")) reply = findAnswer("Education");
+        else if (lowerMsg.includes("skill")) reply = findAnswer("Skills");
+        else if (lowerMsg.includes("goal")) reply = findAnswer("Career Goal");
+        else if (lowerMsg.includes("internship"))
+          reply = findAnswer("Internship");
+        else if (lowerMsg.includes("achievement"))
+          reply = findAnswer("Achievements");
+        else if (lowerMsg.includes("hobby")) reply = findAnswer("Hobbies");
+        else if (lowerMsg.includes("dream"))
+          reply = findAnswer("Future Dreams");
 
-setTimeout(()=>{
-chat.innerHTML+=`<div class="bot">${reply}</div>`;
-chat.scrollTop=chat.scrollHeight;
-},400);
-}
-</script>
-
-</body>
-</html> 
+        setTimeout(() => {
+          chat.innerHTML += `<div class="bot">${reply}</div>`;
+          chat.scrollTop = chat.scrollHeight;
+        }, 400);
+      }
+    </script>
+  </body>
+</html>
