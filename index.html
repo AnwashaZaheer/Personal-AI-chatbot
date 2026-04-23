@@ -1,309 +1,322 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anwshah Zaheer | Portfolio</title>
+<title>Anwshah Khan | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+    }
 
-body{
-background:linear-gradient(-45deg,#0f172a,#1e293b,#0f172a,#111827);
-background-size:400% 400%;
-animation:gradientBG 15s ease infinite;
-color:white;
-}
+    body {
+        background: #fdf6ec;
+        color: #3e3e3e;
+    }
 
-@keyframes gradientBG{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
+    /* NAV */
+    nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 8%;
+        background: #fff7ed;
+        border-bottom: 1px solid #fcd9bd;
+        z-index: 1000;
+    }
 
-/* NAVBAR */
-nav{
-position:fixed;
-width:100%;
-top:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-backdrop-filter:blur(15px);
-background:rgba(255,255,255,0.05);
-border-bottom:1px solid rgba(255,255,255,0.1);
-z-index:1000;
-}
+    .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: #d97706;
+    }
 
-.logo{
-font-size:24px;
-font-weight:700;
-color:#38bdf8;
-}
+    .nav-links {
+        display: flex;
+        list-style: none;
+    }
 
-.nav-links{
-display:flex;
-list-style:none;
-}
+    .nav-links li {
+        margin-left: 30px;
+    }
 
-.nav-links li{
-margin-left:30px;
-}
+    .nav-links a {
+        text-decoration: none;
+        color: #3e3e3e;
+        position: relative;
+    }
 
-.nav-links a{
-text-decoration:none;
-color:white;
-position:relative;
-}
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0%;
+        height: 2px;
+        background: #f59e0b;
+        transition: 0.3s;
+    }
 
-.nav-links a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-5px;
-width:0%;
-height:2px;
-background:#38bdf8;
-transition:0.3s;
-}
+    .nav-links a:hover::after {
+        width: 100%;
+    }
 
-.nav-links a:hover::after{
-width:100%;
-}
+    /* HERO */
+    .hero {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:0 10%;
-}
+    .hero h1 {
+        font-size: 55px;
+    }
 
-.hero h1{
-font-size:55px;
-font-weight:800;
-}
+    .highlight {
+        color: #d97706;
+    }
 
-.highlight{
-color:#38bdf8;
-}
+    .typing {
+        margin-top: 15px;
+        color: #7c6f64;
+    }
 
-.typing{
-margin-top:15px;
-font-size:20px;
-color:#94a3b8;
-}
+    .btn {
+        margin-top: 20px;
+        display: inline-block;
+        padding: 12px 30px;
+        background: #f59e0b;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
 
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:12px 30px;
-border-radius:30px;
-background:#38bdf8;
-color:black;
-text-decoration:none;
-transition:0.4s;
-}
+    .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+    }
 
-.btn:hover{
-transform:scale(1.1);
-box-shadow:0 0 20px #38bdf8;
-}
+    /* SECTIONS */
+    section {
+        padding: 120px 10%;
+    }
 
-/* SECTIONS */
-section{
-padding:120px 10%;
-}
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #d97706;
+    }
 
-h2{
-text-align:center;
-margin-bottom:60px;
-font-size:32px;
-color:#38bdf8;
-}
+    /* CARDS */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
 
-/* CARDS */
-.card-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
+    .card {
+        background: #fffaf3;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #fcd9bd;
+        transition: all 0.3s ease;
+    }
 
-.card{
-background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:15px;
-backdrop-filter:blur(10px);
-transition:0.4s;
-transform:translateY(40px);
-opacity:0;
-}
+    .card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
 
-.card.show{
-transform:translateY(0);
-opacity:1;
-}
+    .card strong {
+        color: #d97706;
+        font-weight: 700;
+    }
 
-.card:hover{
-transform:translateY(-10px) scale(1.03);
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
-}
+    .card h3 {
+        font-weight: 700;
+        color: #d97706;
+        margin-bottom: 8px;
+    }
 
-/* CONTACT */
-.contact-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
+    .card p {
+        color: #6b7280;
+        font-size: 14px;
+    }
 
-.contact-card{
-background:rgba(255,255,255,0.05);
-padding:30px;
-border-radius:15px;
-backdrop-filter:blur(15px);
-transition:0.4s;
-transform:translateY(40px);
-opacity:0;
-}
+    /* CONTACT */
+    .contact-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
 
-.contact-card.show{
-transform:translateY(0);
-opacity:1;
-}
+    .contact-card {
+        background: #fffaf3;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #fcd9bd;
+        transition: all 0.3s ease;
+    }
 
-.contact-card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
-}
+    .contact-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
 
-.social-links{
-margin-top:15px;
-}
+    /* ✅ ONLY LABELS STYLE */
+    .contact-card p {
+        color: #7a6250;
+    }
 
-.social-links a{
-display:inline-block;
-margin-right:15px;
-padding:8px 18px;
-border-radius:25px;
-background:#38bdf8;
-color:black;
-text-decoration:none;
-transition:0.3s;
-}
+    .contact-card strong {
+        color: #d97706;
+        font-weight: 700;
+    }
 
-.social-links a:hover{
-transform:scale(1.1);
-box-shadow:0 0 15px #38bdf8;
-}
+    /* SOCIAL */
+    .social-links {
+        margin-top: 10px;
+    }
 
-/* CHATBOT */
-.chat-icon{
-position:fixed;
-bottom:25px;
-right:25px;
-width:60px;
-height:60px;
-background:#38bdf8;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-cursor:pointer;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-z-index:2000;
-transition:0.3s;
-}
+    .social-links a {
+        margin-right: 10px;
+        background: #f59e0b;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
 
-.chat-icon:hover{
-transform:scale(1.1);
-}
+    .social-links a:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+    }
 
-.chat-box{
-position:fixed;
-bottom:100px;
-right:25px;
-width:320px;
-height:420px;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(15px);
-border-radius:15px;
-display:none;
-flex-direction:column;
-overflow:hidden;
-z-index:2000;
-}
+    /* CHAT */
+    .chat-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #f59e0b;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
-.chat-header{
-padding:15px;
-background:#38bdf8;
-color:black;
-font-weight:600;
-}
+    .chat-icon:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
 
-.chat-messages{
-flex:1;
-padding:15px;
-overflow-y:auto;
-font-size:14px;
-}
+    .chat-box {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 320px;
+        height: 420px;
+        background: #fffaf3;
+        border: 1px solid #fcd9bd;
+        border-radius: 12px;
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+    }
 
-.message{
-margin-bottom:10px;
-}
+    .chat-header {
+        background: #f59e0b;
+        padding: 12px;
+        color: white;
+        font-weight: 600;
+        position: relative;
+    }
 
-.user{
-text-align:right;
-color:#38bdf8;
-}
+    .close-btn {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        color: white;
+        transition: 0.3s;
+    }
 
-.bot{
-text-align:left;
-color:#ccc;
-}
+    .close-btn:hover {
+        transform: scale(1.2);
+    }
 
-.chat-input{
-display:flex;
-border-top:1px solid rgba(255,255,255,0.1);
-}
+    .chat-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+    }
 
-.chat-input input{
-flex:1;
-padding:10px;
-border:none;
-outline:none;
-background:transparent;
-color:white;
-}
+    .chat-input {
+        display: flex;
+        border-top: 1px solid #fcd9bd;
+    }
 
-.chat-input button{
-padding:10px 15px;
-background:#38bdf8;
-border:none;
-cursor:pointer;
-}
+    .chat-input input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
 
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-background:rgba(255,255,255,0.05);
-}
+    .chat-input button {
+        background: #f59e0b;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-.hero h1{font-size:35px;}
-}
+    .user {
+        text-align: right;
+        color: #d97706;
+        margin: 5px 0;
+    }
+
+    .bot {
+        color: #555;
+        margin: 5px 0;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #fff7ed;
+        color: #d97706;
+        font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 35px;
+        }
+    }
 </style>
 </head>
 
@@ -328,188 +341,138 @@ background:rgba(255,255,255,0.05);
 </section>
 
 <section id="skills">
-<h2>Technical Skills</h2>
+<h2>Skills</h2>
 <div class="card-container">
-<div class="card">HTML / CSS</div>
-<div class="card">JavaScript</div>
-<div class="card">Tailwind CSS</div>
-<div class="card">ReactJS</div>
-<div class="card">REST APIs</div>
-<div class="card">Git & GitHub</div>
+<div class="card"><strong>Frontend:</strong> HTML, CSS, JavaScript</div>
+<div class="card"><strong>Framework:</strong> React</div>
+<div class="card"><strong>Backend:</strong> Python</div>
+<div class="card"><strong>Tools:</strong> Git, GitHub</div>
+<div class="card"><strong>APIs:</strong> REST APIs</div>
 </div>
 </section>
 
 <section id="projects">
 <h2>Projects</h2>
+
 <div class="card-container">
+
 <div class="card">
-<h3>Portfolio Websites</h3>
-<p>Responsive modern portfolios using Flexbox & Grid.</p>
+<h3>E-Medical</h3>
+<p>React UI project</p>
+<p>Contributed to a healthcare web application by building reusable components, maintaining UI consistency, and improving user flows.</p>
 </div>
+
 <div class="card">
-<h3>E-Medical Application</h3>
-<p>Built login & appointment UI using React components.</p>
+<h3>Clinic Plus — Healthcare App</h3>
+<p>Designed a healthcare app with appointment booking, video consultations, lab tests, and medicine ordering. Created UI/UX in Figma.</p>
 </div>
+
+<div class="card">
+<h3>Reszo Restaurant App — React.js</h3>
+<p>Developed a responsive restaurant web app with dynamic menu, smooth navigation, and mobile-friendly UI.</p>
+</div>
+
 </div>
 </section>
-
 <section id="contact">
-<h2>Contact Me</h2>
+<h2>Contact</h2>
 <div class="contact-container">
 <div class="contact-card">
-<h3>Get In Touch</h3>
 <p><strong>Email:</strong> anwashayzaheer@gmail.com</p>
-<p><strong>Phone:</strong> 99999999999999</p>
-<p><strong>Location:</strong> Lahore, Pakistan</p>
+<p><strong>Phone:</strong> 030000000</p>
 </div>
 
 <div class="contact-card">
-<h3>Connect With Me</h3>
 <div class="social-links">
-<a href="https://www.linkedin.com/in/anwasha-khan-31597127a/" target="_blank">LinkedIn</a>
-<a href="https://github.com/AnwashaZaheer" target="_blank">GitHub</a>
+<a href="https://linkedin.com" target="_blank">LinkedIn</a>
+<a href="https://github.com" target="_blank">GitHub</a>
 </div>
 </div>
 </div>
 </section>
 
-<footer>© 2026 Anwshah Khan</footer>
+<footer>© 2026 Anwshah</footer>
 
 <div class="chat-icon" onclick="toggleChat()">💬</div>
 
 <div class="chat-box" id="chatBox">
-<div class="chat-header">Ask Me About Anwshah</div>
+<div class="chat-header">
+  Ask Me
+  <span class="close-btn" onclick="toggleChat()">✖</span>
+</div>
 <div class="chat-messages" id="chatMessages"></div>
 <div class="chat-input">
-<input type="text" id="userInput" placeholder="Type a message...">
+<input id="userInput" placeholder="Type your question...">
 <button onclick="sendMessage()">Send</button>
 </div>
 </div>
 
 <script>
-// Typing
-const text=["Front-End Developer","Computer Science Student","React Learner"];
-let count=0,index=0,currentText="",letter="";
-(function type(){
-if(count===text.length){count=0;}
-currentText=text[count];
-letter=currentText.slice(0,++index);
-document.getElementById("typing").textContent=letter;
-if(letter.length===currentText.length){
-setTimeout(()=>{index=0;count++;},1500);
-}
-setTimeout(type,100);
+const arr=["AI Engineer","Web Developer","Python Learner"];
+let a=0,b=0;
+(function typing(){
+if(a===arr.length)a=0;
+let txt=arr[a];
+document.getElementById("typing").innerText=txt.slice(0,b++);
+if(b>txt.length){b=0;a++;}
+setTimeout(typing,120);
 })();
 
-// Scroll Reveal
-const elements=document.querySelectorAll('.card,.contact-card');
-window.addEventListener('scroll',()=>{
-elements.forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-100){
-el.classList.add('show');
-}
-});
-});
-
-// Chat Toggle
 function toggleChat(){
-const box=document.getElementById("chatBox");
+let box=document.getElementById("chatBox");
 box.style.display=box.style.display==="flex"?"none":"flex";
+document.getElementById("userInput").focus();
 }
 
-// ====== YOUR PERSONAL KNOWLEDGE BASE ======
+document.getElementById("userInput").addEventListener("keydown",e=>{
+if(e.key==="Enter") sendMessage();
+});
+
 const portfolioContext = `
-Name: Anwshah Khan
-Family: Two brothers, no sisters. Father is a government officer. Mother is a housewife. Her brothers are very supportive and loving. She feels blessed.
-Education: Matric A Grade, Intermediate A+ Grade, Currently 6th semester Computer Science at NCBA&E. Last semester GPA 3.78.
-Professional Development: Joined NAVTTC AI course. Learning Python, AI, ML, Deep Learning.
+Education: Currently 6th semester Computer Science. GPA 3.78.
 Career Goal: Become an AI Engineer.
-Internship: Completed Web Development internship at Codeiez.
-Skills: Python, AI fundamentals, ML basics, Deep Learning basics, Web Development, Figma.
-Achievements: Athlete. Secured 1st position in athletics at GCU in 2024.
-Hobbies: Reading books, running, cooking, exploring restaurants.
-Future Dreams: Go to Canada independently and build a successful future. Buy Fortuner or BMW. Open the best coffee restaurant.
+Internship: Completed Web Development internship.
+Skills: AI Engineer, Web Developer, Python Learner.
+Achievements: 1st position in athletics at GCU.
+Hobbies: Coding, Reading, Running.
+Future Dreams: Open a coffee restaurant.
 `;
 
-// ====== ADD YOUR OPENAI API KEY HERE ======
-const API_KEY = "API_key value";
-
-// ====== CHAT TOGGLE ======
-function toggleChat(){
-const box=document.getElementById("chatBox");
-box.style.display=box.style.display==="flex"?"none":"flex";
+function findAnswer(keyword){
+let lines=portfolioContext.split("\n");
+for(let line of lines){
+if(line.toLowerCase().includes(keyword.toLowerCase())){
+return line.split(":")[1];
+}
+}
 }
 
-// ====== SEND MESSAGE ======
 function sendMessage(){
-const input=document.getElementById("userInput");
-const messages=document.getElementById("chatMessages");
-let userText=input.value.trim();
+let input=document.getElementById("userInput");
+let msg=input.value.trim();
+if(!msg) return;
 
-if(userText==="") return;
-
-messages.innerHTML+=`<div class="message user">${userText}</div>`;
+let chat=document.getElementById("chatMessages");
+chat.innerHTML+=`<div class="user">${msg}</div>`;
 input.value="";
 
-const text=userText.toLowerCase();
+let lowerMsg=msg.toLowerCase();
+let reply="Ask me about skills, education, goals or hobbies 😊";
 
-let reply="I'm Anwshah's assistant 😊 Ask me about her education, family, achievements, goals, internship, hobbies or dreams!";
+if(lowerMsg.includes("education")) reply=findAnswer("Education");
+else if(lowerMsg.includes("skill")) reply=findAnswer("Skills");
+else if(lowerMsg.includes("goal")) reply=findAnswer("Career Goal");
+else if(lowerMsg.includes("internship")) reply=findAnswer("Internship");
+else if(lowerMsg.includes("achievement")) reply=findAnswer("Achievements");
+else if(lowerMsg.includes("hobby")) reply=findAnswer("Hobbies");
+else if(lowerMsg.includes("dream")) reply=findAnswer("Future Dreams");
 
-// FAMILY
-if(text.includes("family") || text.includes("brother") || text.includes("parent")){
-reply="Anwshah has two brothers . Her father is a government officer and her mother is a housewife. Her brothers are very supportive and loving, and she feels truly blessed.";
-}
-
-// EDUCATION
-else if(text.includes("education") || text.includes("gpa") || text.includes("semester") || text.includes("study")){
-reply="She is currently in 6th semester of Computer Science at NCBA&E. Her last semester GPA was 3.78. She got A grade in Matric and B grade in Intermediate.";
-}
-
-// AI / CAREER
-else if(text.includes("ai") || text.includes("machine") || text.includes("deep") || text.includes("python") || text.includes("navttc")){
-reply="She recently joined NAVTTC AI course and is learning Python, AI, Machine Learning and Deep Learning. Her goal is to become an AI Engineer.";
-}
-
-// INTERNSHIP
-else if(text.includes("internship") || text.includes("codeiez")){
-reply="She completed her Web Development internship at Codeiez last year.";
-}
-
-// SKILLS
-else if(text.includes("skill")){
-reply="Her skills include Python, AI fundamentals, ML basics, Deep Learning basics, Web Development and Figma.";
-}
-
-// ACHIEVEMENT
-else if(text.includes("achievement") || text.includes("athlete") || text.includes("gcu")){
-reply="She is an athlete and secured 1st position in athletics at GCU in 2024 🏆.";
-}
-
-// HOBBY
-else if(text.includes("hobby") || text.includes("hobbies") || text.includes("reading") || text.includes("running") || text.includes("cooking")){
-reply="She enjoys reading books, running, cooking and exploring different restaurants.";
-}
-
-// DREAM
-else if(text.includes("dream") || text.includes("future") || text.includes("canada") || text.includes("bmw") || text.includes("fortuner") || text.includes("coffee")){
-reply="Open the best coffee restaurant.";
-}
-
-// CONTACT
-else if(text.includes("contact") || text.includes("email") || text.includes("phone")){
-reply="You can contact her at anwashayzaheer@gmail.com or call 030000000.";
-}
-
-// Show reply with slight delay
 setTimeout(()=>{
-messages.innerHTML+=`<div class="message bot">${reply}</div>`;
-messages.scrollTop=messages.scrollHeight;
-},500);
+chat.innerHTML+=`<div class="bot">${reply}</div>`;
+chat.scrollTop=chat.scrollHeight;
+},400);
 }
-
-// Chat Logic
-
 </script>
 
 </body>
-</html>
+</html> 
